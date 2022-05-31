@@ -3,6 +3,7 @@ const CrewMemberModel = require('../models/crewMember.model');
 
 module.exports.getMembers = async (req, res) => {
     const members = await CrewMemberModel.find();
+    res.set('Access-Control-Allow-Origin', '*');
     res.status(200).json(members);
 }
 
