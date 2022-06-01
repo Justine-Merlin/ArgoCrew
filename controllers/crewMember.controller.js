@@ -3,7 +3,7 @@ const CrewMemberModel = require('../models/crewMember.model');
 
 module.exports.getMembers = async (req, res) => {
     const members = await CrewMemberModel.find();
-    res.set('Access-Control-Allow-Origin', '*');
+    //res.set('Access-Control-Allow-Origin', '*');
     res.status(200).json(members);
 }
 
@@ -11,7 +11,7 @@ module.exports.addMember = async(req, res) => {
     const { name, qualifiers } = req.body;
     try {
             const member = await CrewMemberModel.create({ name, qualifiers });
-            res.set('Access-Control-Allow-Origin', '*');         
+            //res.set('Access-Control-Allow-Origin', '*');         
             res.status(201).json({member})
         } 
         catch(err) {
