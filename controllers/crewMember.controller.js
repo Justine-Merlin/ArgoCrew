@@ -10,7 +10,8 @@ module.exports.getMembers = async (req, res) => {
 module.exports.addMember = async(req, res) => {
     const { name, qualifiers } = req.body;
     try {
-            const member = await CrewMemberModel.create({ name, qualifiers });         
+            const member = await CrewMemberModel.create({ name, qualifiers });
+            res.set('Access-Control-Allow-Origin', '*');         
             res.status(201).json({member})
         } 
         catch(err) {
