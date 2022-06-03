@@ -1,0 +1,23 @@
+.header {
+    background-color: #e4dfdf;
+    height: fit-content;
+    overflow: hidden;
+    min-height: 50px;
+    max-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    img {
+        height: 120px;
+    }
+
+    h1 {
+        font-size: 2.7rem;
+    }
+
+    p {
+        font-style: italic;
+    }
+}

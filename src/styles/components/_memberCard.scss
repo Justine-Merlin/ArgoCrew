@@ -1,0 +1,40 @@
+.member-card {
+    height: 4em;
+    margin: 1.2em 0;
+    width: 80%;
+    display: flex;
+    align-items: center;
+
+    img {
+        margin-left: 40%;
+        height: 80%;
+    }
+
+    div {
+        width: 80%;
+        height: fit-content;
+        min-width: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 1rem 0 0.6rem;
+
+        h4 {
+            padding-bottom: 0.1rem;
+        }
+
+        h4::first-letter {
+            text-transform: capitalize;
+        }
+
+        .card-qualifiers {
+            margin: 0;
+            padding: 0;
+            text-align: start;
+        }
+
+        p::first-letter {
+            text-transform: capitalize;
+        }
+    }
+}
