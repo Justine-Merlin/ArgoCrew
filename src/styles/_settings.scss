@@ -9,7 +9,10 @@ $color-alpha: #b78846;
 }
 
 body {
+    position: relative;
+    min-height: 100%;
     margin: 0;
     padding: 0;
+    padding-bottom: 5rem;
     background-color: rgb(255, 255, 255);
 }
