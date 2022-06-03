@@ -11,7 +11,6 @@ module.exports.addMember = async(req, res) => {
     const { name, qualifiers } = req.body;
     try {
             const member = await CrewMemberModel.create({ name, qualifiers });
-            //res.set('Access-Control-Allow-Origin', '*');         
             res.status(201).json({member})
         } 
         catch(err) {
@@ -35,5 +34,18 @@ module.exports.updateMember = async (req, res) => {
         res.status(200).json(member)
     } catch(err) {
         res.status(500).json({err})
+    }
+}
+
+module.exports.deleteMember = async (req, res) => {
+    // Checking if users exists
+    if (!mongoose.isValidObjectId(req.params.id))
+        res.status(400).send("Unknown Member's ID : " + req.params.id)
+
+    try {
+        await CrewMemberModel.deleteOne({_id: req.params.id});
+        res.status(200).send('Member ' + req.params.id + ' deleted successfully')
+    } catch (err) {
+        res.status(500).send({err})
     }
 }
