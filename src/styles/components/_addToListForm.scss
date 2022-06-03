@@ -73,7 +73,7 @@
             align-items: center;
             gap: 1rem;
             width: 80%;
-            margin: 1rem 0;
+            margin: 1rem auto;
         }
 
         .submit-btn {
@@ -113,6 +113,7 @@
             position: relative;
             margin: 1rem 0;
             color: rgb(193, 193, 193);
+            user-select: none;
 
             &:hover {
                 border: solid 2px rgb(193, 193, 193);

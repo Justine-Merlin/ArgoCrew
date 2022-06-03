@@ -1,23 +1,22 @@
 .member-card {
     height: 4em;
-    margin: 1.2em 0;
-    width: 80%;
+    padding: 1.2em;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
     img {
-        margin-left: 40%;
         height: 80%;
     }
 
     div {
-        width: 80%;
         height: fit-content;
-        min-width: fit-content;
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 0 1rem 0 0.6rem;
+        justify-self: flex-start;
+        padding: 0 0.6rem;
 
         h4 {
             padding-bottom: 0.1rem;
@@ -36,5 +35,29 @@
         p::first-letter {
             text-transform: capitalize;
         }
+
+    }
+
+    .delete-btn {
+        justify-self: flex-end;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 3px;
+        color: #8d5555;
+        border: solid 1px #8d555500;
+        border-radius: 2px;
+        background-color: rgba(255, 255, 255, 0);
+        transition: 0.25s;
+        opacity: 0;
+
+        &:hover {
+            color: #b30000;
+            border: solid 1px #8d5555;
+        }
+    }
+
+    .show-on {
+        opacity: 1;
     }
 }

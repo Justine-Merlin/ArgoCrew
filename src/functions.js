@@ -25,3 +25,10 @@ export const qualifiersToString = (newMember) => {
   const str = newMember.qualifiers.join(', ').replace(/, ([^,]*)$/, ' et $1');
   return str
 }
+
+export const deleteMember = async (id) => {
+  const response = await fetch(`${API_URL}/${id}`, {
+    method: 'DELETE'
+  })
+  return response
+}

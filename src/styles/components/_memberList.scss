@@ -56,11 +56,16 @@
             right: -2px;
         }
 
+        @media screen and (max-width: 1350px) {
+            padding: 1rem;
+        }
+
         .members-list {
             display: grid;
-            width: 90%;
+            width: 95%;
             margin: 0 auto;
             grid-template-columns: repeat(auto-fit, minmax(calc(100%/3), 1fr));
+
 
             @media screen and (max-width: 1350px) {
                 grid-template-columns: repeat(auto-fit, minmax(calc(100%/2), 1fr));
@@ -68,6 +73,7 @@
 
             @media screen and (max-width: 560px) {
                 grid-template-columns: repeat(auto-fit, minmax(calc(100%/1), 1fr));
+                width: 100%;
             }
 
         }

@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import MemberList from './components/MemberList';
 import Separator from './components/Separator';
-import { addMember, getMembers, qualifiersToString } from './functions';
+import { addMember, deleteMember, getMembers, qualifiersToString } from './functions';
 import { ErrorMessage, Member, NewMember } from './types';
 
 function App() {
@@ -34,7 +34,15 @@ function App() {
         name: '',
         qualifiers: []
       })
-      setErrorMessage({ ...errorMessage, nameError: 'Veuillez entrer un nom.' })
+      setErrorMessage({ ...errorMessage, nameError: 'Veuillez entrer un nom.' });
+      fetchData();
+    }
+  }
+  const handleDelete = async (e: React.SyntheticEvent, member: Member) => {
+    e.preventDefault();
+    const answer = window.confirm(`Souhaitez-vous supprimer ${member.name} de votre équipage ?`);
+    if (answer) {
+      await deleteMember(member._id);
       fetchData();
     }
   }
@@ -47,7 +55,7 @@ function App() {
     <div className="App">
       <Header />
       <Body members={members}>
-        <MemberList members={members} />
+        <MemberList members={members} handleDelete={handleDelete} />
         <Separator />
         {
           members.length === 50 ?
