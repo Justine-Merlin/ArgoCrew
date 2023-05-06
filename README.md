@@ -33,5 +33,5 @@ This repo contain 2 orphans main branch, one for client app and the other for ba
 
 ## Screenshots
 
-![](./screenshots/galerie_photo_home_screen.jpg)
-![](./screenshots/galerie_photo_gallery_screen.jpg)
+![](./screenshots/argo-crew-main.png)
+![](./screenshots/argo-crew-form.png)
