@@ -1,6 +1,7 @@
 import express, { Router } from "express";
 import serverless from "serverless-http";
 const crewMemberRoutes = require("../../routes/crewMember.routes");
+const crewMemberController = require("../../controllers/crewMember.controller");
 
 const api = express();
 
