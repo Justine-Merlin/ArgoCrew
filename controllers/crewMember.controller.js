@@ -2,11 +2,8 @@ const mongoose = require("mongoose");
 const CrewMemberModel = require("../models/crewMember.model");
 
 module.exports.getMembers = async (req, res) => {
-	console.log("hello");
-	// const members = await CrewMemberModel.find();
-	//res.set('Access-Control-Allow-Origin', '*');
-	// res.status(200).json(members);
-	res.status(200).send("it work");
+	const members = await CrewMemberModel.find();
+	res.status(200).json(members);
 };
 
 module.exports.addMember = async (req, res) => {
