@@ -5,9 +5,9 @@ import crewMemberRoutes from "../../routes/crewMember.routes";
 
 const api = express();
 
-const router = Router();
-api.use("/members", crewMemberRoutes);
+// const router = Router();
+// api.use("/members", crewMemberRoutes);
 
-api.use("/api/", router);
+api.use("/api/", crewMemberRoutes);
 
 export const handler = serverless(api);
